@@ -10,11 +10,13 @@
 - [x] Branding pass on os-release, profiledef.sh, FUNDING.yml
 - [x] Dropped gparted (pulled in the full GTK3 stack) — parted/gptfdisk/cfdisk cover partitioning
 - [x] lf over ranger for the file-manager fallback — static binary, no Python interpreter to spin up
+- [x] Boot-verified first ISO at 1.1GB
+- [x] linux-firmware pinned to intel/atheros/realtek/broadcom sub-packages (~200MB vs ~400MB full set) — dropped nvidia (discrete GPU, rare on ~1GB-RAM-era laptops) and mediatek (mobile SoC, not laptop hardware)
+- [x] Dropped grub/os-prober from the live ISO — install-time only (pacstrap onto the target instead of carrying in the live image)
 
 ## Near-term
 
-- [ ] Boot-test in QEMU: confirm i3 + urxvt + dmenu + nmtui all work end to end
-- [ ] Trim packages.x86_64 further against actual installed footprint (~1GB RAM target)
+- [ ] Re-boot-test in QEMU after the firmware/grub trim, confirm actual ISO size
 - [ ] Wallpaper / branding assets (syslinux splash, Backgrounds/) for MiniBang identity
 
 ## Backlog / Ideas
