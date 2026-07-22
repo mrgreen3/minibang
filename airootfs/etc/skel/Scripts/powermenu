@@ -1,0 +1,9 @@
+#!/bin/bash
+choice=$(printf "Logout\nReboot\nPoweroff" | dmenu -p "Power" -l 3 \
+    -fn "DejaVu Sans Mono:size=10" -nb "#251848" -nf "#ead6e8" -sb "#c0568b" -sf "#ead6e8")
+
+case "$choice" in
+    Logout)   i3-msg exit ;;
+    Reboot)   systemctl reboot ;;
+    Poweroff) systemctl poweroff ;;
+esac

@@ -1,0 +1,4 @@
+MiniBang
+
+useradd in customize_airootfs.sh uses -g users (shared group) for the live
+user — check whether a private user group would be preferable instead.

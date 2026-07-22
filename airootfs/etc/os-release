@@ -1,0 +1,10 @@
+NAME="MiniBang"
+PRETTY_NAME="MiniBang"
+ID=minibang
+ID_LIKE=arch
+BUILD_ID=rolling
+
+ANSI_COLOR="0;32"
+HOME_URL="https://github.com/mrgreen3/minibang"
+DOCUMENTATION_URL="https://github.com/mrgreen3/minibang"
+SUPPORT_URL="https://github.com/mrgreen3/minibang/issues"

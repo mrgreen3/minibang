@@ -1,0 +1,128 @@
+## === XORG / WINDOW MANAGER STACK ===
+xorg-server
+xorg-xinit
+xorg-drivers
+i3-wm
+i3status
+i3lock
+rxvt-unicode
+dmenu
+feh
+scrot
+
+## === ARCHIVE TOOLS ===
+zip
+unzip
+p7zip
+xz
+
+## === TERMINAL-BASED FALLBACKS (no GUI browser/file manager shipped) ===
+lf
+w3m
+
+## === FILE MANAGEMENT ===
+udisks2
+
+## === TEXT EDITORS ===
+vim
+
+## === THEMES & FONTS ===
+ttf-dejavu
+
+## === SYSTEM MONITORING ===
+htop
+fastfetch
+laptop-detect
+
+## === DISK & PARTITION TOOLS ===
+parted
+gptfdisk
+ddrescue
+testdisk
+ntfs-3g
+
+## === NETWORK MANAGEMENT ===
+networkmanager
+usb_modeswitch
+broadcom-wl
+
+## === SYSTEM TOOLS ===
+dialog
+sudo
+fontconfig
+kbd
+xclip
+
+## === COMMAND-LINE TOOLS ===
+openssh
+arch-install-scripts
+curl
+pacman-contrib
+fzf
+eza
+
+## === BUILD & DEVELOPMENT TOOLS ===
+squashfs-tools
+rsync
+pv
+dosfstools
+btrfs-progs
+
+## === BOOTLOADER & FIRMWARE ===
+grub
+os-prober
+lsb-release
+syslinux
+efibootmgr
+intel-ucode
+amd-ucode
+
+## === CORE SYSTEM PACKAGES (Arch Linux base) ===
+## Essential packages required for system operation
+bash
+bzip2
+coreutils
+cryptsetup
+device-mapper
+diffutils
+e2fsprogs
+file
+filesystem
+findutils
+gawk
+gcc-libs
+gettext
+glibc
+grep
+gzip
+inetutils
+iproute2
+iputils
+less
+licenses
+linux
+linux-firmware
+logrotate
+lvm2
+man-db
+man-pages
+nano
+vi
+pacman
+pciutils
+perl
+procps-ng
+psmisc
+sed
+shadow
+sysfsutils
+systemd-sysvcompat
+tar
+usbutils
+util-linux
+which
+memtest86+
+memtest86+-efi
+mkinitcpio
+mkinitcpio-archiso
+archlinux-keyring

@@ -1,1 +1,44 @@
-IyBNaW5pQmFuZwoKQSBtaW5pbWFsIEFyY2ggTGludXgtYmFzZWQgc2V0dXAgZm9yIG9sZGVyIGxhcHRvcHMgd2l0aCB2ZXJ5IGxvdyBSQU0gKH4xR0IpLCB3aGVyZSBhIG1vZGVybiBBcmNoIGluc3RhbGwgd2l0aCBXYXlsYW5kIGFuZCBhIGZ1bGwgZGVza3RvcCBlbnZpcm9ubWVudCBpc24ndCBwcmFjdGljYWwuCgpCdWlsdCBlbnRpcmVseSB3aXRoIHBhY21hbiBhbmQgb2ZmaWNpYWwgQXJjaCByZXBvc2l0b3JpZXMg4oCUIG5vIHNlcGFyYXRlIGRpc3Rybywgbm8gYWx0ZXJuYXRlIHBhY2thZ2UgbWFuYWdlci4KCiMjIFN0YWNrCgotICoqWG9yZyoqIChub3QgV2F5bGFuZCkg4oCUIGxvd2VyIG92ZXJoZWFkLCBubyBjb21wb3NpdG9yIHRheAotICoqaTMqKiDigJQgdGlsaW5nIHdpbmRvdyBtYW5hZ2VyLCBzaGlwcyB3aXRoIGBpM2JhcmAgKyBgaTNzdGF0dXNgIGJ1aWx0IGluIChubyBzZXBhcmF0ZSBwYW5lbCBuZWVkZWQpCi0gKipyeHZ0LXVuaWNvZGUgKHVyeHZ0KSoqIOKAlCBsaWdodHdlaWdodCB0ZXJtaW5hbCwgc3VwcG9ydHMgZGFlbW9uIG1vZGUgdG8gc2hhcmUgb25lIHByb2Nlc3MgYWNyb3NzIHdpbmRvd3MKLSAqKmZlaCoqIOKAlCB3YWxscGFwZXIgc2V0dGluZwotICoqZG1lbnUqKiDigJQgYXBwIGxhdW5jaGVyLCBubyBHVEsvUXQgZGVwZW5kZW5jaWVzCi0gKip4b3JnLWRyaXZlcnMqKiBncm91cCDigJQgcHVsbHMgaW4gdGhlIGZ1bGwgYHhmODYtdmlkZW8tKmAgLyBgeGY4Ni1pbnB1dC0qYCBzZXQgc28gcGFjbWFuIGNhbiBtYXRjaCB3aGF0ZXZlciBHUFUvaW5wdXQgaGFyZHdhcmUgaXMgcHJlc2VudCwgd2l0aG91dCBuZWVkaW5nIHRvIGlkZW50aWZ5IGl0IHVwIGZyb250CgpHVEsgZGVwZW5kZW5jaWVzIGFyZSBhdm9pZGVkIHdoZXJlIHBvc3NpYmxlIHRocm91Z2hvdXQgdGhlIHN0YWNrLiBObyBHVUkgYnJvd3NlciBvciBHVUkgZmlsZSBtYW5hZ2VyIGlzIHNoaXBwZWQgYnkgZGVmYXVsdCDigJQgYm90aCBhcmUgdG9vIGhlYXZ5IGZvciB0aGUgUkFNIGJ1ZGdldCBvbiB0aGlzIGNsYXNzIG9mIGhhcmR3YXJlLiBUZXJtaW5hbC1iYXNlZCBhbHRlcm5hdGl2ZXMgKGUuZy4gYHJhbmdlcmAvYGxmYCBmb3IgZmlsZXMsIGB3M21gL2BseW54YCBmb3IgdGV4dCBicm93c2luZykgYXJlIHRoZSBmYWxsYmFjayBpZiBuZWVkZWQuCgojIyBJbnN0YWxsCgpgYGBzaApwYWNtYW4gLVMgeG9yZy1zZXJ2ZXIgeG9yZy14aW5pdCB4b3JnLWRyaXZlcnMgaTMgZmVoIHJ4dnQtdW5pY29kZSBkbWVudQpgYGAKClRoZW4gc2V0IHVwIGB+Ly54aW5pdHJjYDoKCmBgYHNoCnhyZGIgLW1lcmdlIH4vLlhyZXNvdXJjZXMKZmVoIC0tYmctc2NhbGUgL3BhdGgvdG8vd2FsbHBhcGVyLmpwZyAmCmV4ZWMgaTMKYGBgCgpTdGFydCB3aXRoIGBzdGFydHhgIGZyb20gYSBUVFkg4oCUIG5vIGRpc3BsYXkgbWFuYWdlciwgdG8ga2VlcCBiYWNrZ3JvdW5kIHByb2Nlc3NlcyBtaW5pbWFsLgoKIyMgV2h5IG5vdCBhcmNobGludXgzMj8KCkV2ZW4gb24gdmVyeSBvbGQgaGFyZHdhcmUsIG1vc3QgbGFwdG9wcyBmcm9tIHRoZSBsYXN0IH4xNSB5ZWFycyBhcmUgNjQtYml0IGNhcGFibGUgZGVzcGl0ZSBoYXZpbmcgdGlueSBSQU0uIGFyY2hsaW51eDMyIGlzIGEgdm9sdW50ZWVyLW1haW50YWluZWQgZm9yayBmb3IgZ2VudWluZWx5IDMyLWJpdC1vbmx5IHN5c3RlbXMsIGJ1dCBpdCB0cmFpbHMgbWFpbmxpbmUgaW4gcGFja2FnZSBmcmVzaG5lc3Mg4oCUIHdvcnRoIHVzaW5nIG9ubHkgaWYgdGhlIENQVSBpcyBjb25maXJtZWQgMzItYml0IG9ubHkuCgojIyBLZXJuZWwKCk5vIGN1c3RvbSBrZXJuZWwg4oCUIHVzZXMgc3RhbmRhcmQgQXJjaCBga2V4YCBvciBgbGludXgtbHRzYCBwYWNrYWdlcy4gVGhlIHR3byBhcmUgd2l0aGluIH4zTUIgb2YgZWFjaCBvdGhlciBpbnN0YWxsZWQsIHNvIHRoZSByZWFsIFJBTSBzYXZpbmdzIGNvbWUgZnJvbSB0aGUgdXNlcnNwYWNlIHN0YWNrIGFib3ZlLCBub3QgdGhlIGtlcm5lbCBjaG9pY2UuCgojIyBTdGF0dXMKCkVhcmx5IHNldHVwIC8gd29yayBpbiBwcm9ncmVzcy4K
+# MiniBang
+
+A minimal Arch Linux-based setup for older laptops with very low RAM (~1GB), where a modern Arch install with Wayland and a full desktop environment isn't practical.
+
+Built entirely with pacman and official Arch repositories — no separate distro, no alternate package manager.
+
+## Stack
+
+- **Xorg** (not Wayland) — lower overhead, no compositor tax
+- **i3** — tiling window manager, ships with `i3bar` + `i3status` built in (no separate panel needed)
+- **rxvt-unicode (urxvt)** — lightweight terminal, supports daemon mode to share one process across windows
+- **feh** — wallpaper setting
+- **dmenu** — app launcher, no GTK/Qt dependencies
+- **xorg-drivers** group — pulls in the full `xf86-video-*` / `xf86-input-*` set so pacman can match whatever GPU/input hardware is present, without needing to identify it up front
+
+GTK dependencies are avoided where possible throughout the stack. No GUI browser or GUI file manager is shipped by default — both are too heavy for the RAM budget on this class of hardware. Terminal-based alternatives (e.g. `ranger`/`lf` for files, `w3m`/`lynx` for text browsing) are the fallback if needed.
+
+## Install
+
+```sh
+pacman -S xorg-server xorg-xinit xorg-drivers i3 feh rxvt-unicode dmenu
+```
+
+Then set up `~/.xinitrc`:
+
+```sh
+xrdb -merge ~/.Xresources
+feh --bg-scale /path/to/wallpaper.jpg &
+exec i3
+```
+
+Start with `startx` from a TTY — no display manager, to keep background processes minimal.
+
+## Why not archlinux32?
+
+Even on very old hardware, most laptops from the last ~15 years are 64-bit capable despite having tiny RAM. archlinux32 is a volunteer-maintained fork for genuinely 32-bit-only systems, but it trails mainline in package freshness — worth using only if the CPU is confirmed 32-bit only.
+
+## Kernel
+
+No custom kernel — uses standard Arch `kex` or `linux-lts` packages. The two are within ~3MB of each other installed, so the real RAM savings come from the userspace stack above, not the kernel choice.
+
+## Status
+
+Early setup / work in progress.
