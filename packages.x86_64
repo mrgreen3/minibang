@@ -69,8 +69,10 @@ dosfstools
 btrfs-progs
 
 ## === BOOTLOADER & FIRMWARE ===
-## grub/os-prober intentionally omitted — install-time only (pacstrap onto
-## the target at install time), not needed to boot the live ISO itself.
+## grub needed by the installer (pacstrapped onto the target disk at install
+## time) — shipped in the live ISO so abinstall doesn't need network access.
+## os-prober still intentionally omitted.
+grub
 lsb-release
 syslinux
 efibootmgr
