@@ -1,6 +1,12 @@
 general {
     colors = true
     interval = 5
+
+    # Mirrors MiniBang's ~/.Xresources palette (i3status can't read X
+    # resources directly, so these are kept in sync by hand).
+    color_good     = "#3fa796"
+    color_degraded = "#d9a441"
+    color_bad      = "#e0623f"
 }
 
 order += "tztime local"

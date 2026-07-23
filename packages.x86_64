@@ -112,8 +112,6 @@ logrotate
 lvm2
 man-db
 man-pages
-nano
-vi
 pacman
 pciutils
 perl

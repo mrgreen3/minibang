@@ -4,13 +4,14 @@ set $mod Mod4
 
 font pango:DejaVu Sans Mono 10
 
-# ArchBang "sunset-lake" palette (shared with mango/waybar/rofi)
-set $bg      #251848
-set $bg-alt  #1e1540
-set $fg      #ead6e8
-set $fg-dim  #7b4178
-set $accent  #c0568b
-set $urgent  #f2729a
+# MiniBang theme — sourced from ~/.Xresources (single source of truth, see
+# that file's comment); fallback hex only applies if xrdb has no value merged.
+set_from_resource $bg      i3.background #1a1d1e
+set_from_resource $bg-alt  i3.bgAlt      #24282a
+set_from_resource $fg      i3.foreground #d8d8d8
+set_from_resource $fg-dim  i3.fgDim      #6b7280
+set_from_resource $accent  i3.accent     #3fa796
+set_from_resource $urgent  i3.urgent     #e0623f
 
 # class                 border   backgr.  text   indicator  child_border
 client.focused           $accent  $bg      $fg    $accent    $accent
@@ -23,7 +24,7 @@ set $term urxvtc
 bindsym $mod+Return exec $term
 
 # Launcher
-set $dmenu_theme -fn "DejaVu Sans Mono:size=10" -nb "#251848" -nf "#ead6e8" -sb "#c0568b" -sf "#ead6e8"
+set $dmenu_theme -fn "DejaVu Sans Mono:size=10" -nb $bg -nf $fg -sb $accent -sf $fg
 bindsym $mod+space exec dmenu_run $dmenu_theme
 
 # Web (terminal browser, no GUI browser shipped)
@@ -40,7 +41,7 @@ bindsym $mod+n exec $term -e nmtui
 bindsym $mod+m exec ~/Scripts/powermenu
 
 # Lock screen
-bindsym $mod+l exec i3lock -c 251848
+bindsym $mod+l exec i3lock -c 1a1d1e
 
 # Kill focused window
 bindsym $mod+q kill
@@ -127,6 +128,10 @@ bindsym $mod+r mode "resize"
 # Gaps (kept modest — low-RAM target, i3's compositing-free gaps are cheap either way)
 gaps inner 6
 gaps outer 0
+
+# No titlebars — thin pixel border instead (focus still visible via border color)
+default_border pixel 2
+default_floating_border pixel 2
 
 bar {
     status_command i3status
