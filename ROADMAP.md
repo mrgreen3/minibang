@@ -3,7 +3,8 @@
 ## Done
 
 - [x] Reworked from ArchBang scaffold: Xorg + i3 stack (i3-wm, i3status, i3lock, rxvt-unicode, feh, dmenu)
-- [x] Dropped Wayland/MangoWM/GTK stack, AUR repo, ABI installer
+- [x] Dropped Wayland/MangoWM/GTK stack, AUR repo
+- [x] Install-to-disk: reworked ArchBang's abinstall into `mbinstall` — i3/Xorg keyboard config via `localectl set-x11-keymap` (was mango-specific), gparted removed, full MiniBang branding
 - [x] NetworkManager, controlled via nmtui (no dmenu-based network UI)
 - [x] No display manager — autologin tty1 + `startx` via `.bash_profile`/`.xinitrc`
 - [x] i3 config, i3status config, urxvt daemon mode (.Xresources)
@@ -21,6 +22,5 @@
 
 ## Backlog / Ideas
 
-- [ ] Install-to-disk flow (deliberately out of scope for the first bootable pass)
 - [ ] Screenshot script polish (region select via a helper wrapping scrot)
 - [ ] Accessibility options (font size, contrast)
