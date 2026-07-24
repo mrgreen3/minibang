@@ -52,6 +52,7 @@ sudo
 fontconfig
 kbd
 xclip
+zram-generator
 
 ## === COMMAND-LINE TOOLS ===
 openssh
