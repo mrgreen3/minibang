@@ -37,8 +37,6 @@ laptop-detect
 ## === DISK & PARTITION TOOLS ===
 parted
 gptfdisk
-ddrescue
-testdisk
 ntfs-3g
 
 ## === NETWORK MANAGEMENT ===
@@ -63,7 +61,6 @@ fzf
 eza
 
 ## === BUILD & DEVELOPMENT TOOLS ===
-squashfs-tools
 rsync
 pv
 dosfstools
@@ -74,7 +71,6 @@ btrfs-progs
 ## time) — shipped in the live ISO so abinstall doesn't need network access.
 ## os-prober still intentionally omitted.
 grub
-lsb-release
 syslinux
 efibootmgr
 intel-ucode
