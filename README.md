@@ -13,7 +13,7 @@ Built entirely with pacman and official Arch repositories — no separate distro
 - **dmenu** — app launcher, no GTK/Qt dependencies
 - **xorg-drivers** group — pulls in the full `xf86-video-*` / `xf86-input-*` set so pacman can match whatever GPU/input hardware is present, without needing to identify it up front
 
-GTK dependencies are avoided where possible throughout the stack. No GUI browser or GUI file manager is shipped by default — both are too heavy for the RAM budget on this class of hardware. Terminal-based alternatives (e.g. `ranger`/`lf` for files, `w3m`/`lynx` for text browsing) are the fallback if needed.
+GTK dependencies are avoided where possible throughout the stack. No GUI browser or GUI file manager is shipped by default — both are too heavy for the RAM budget on this class of hardware. Terminal-based alternatives (e.g. `ranger`/`lf` for files, `links` for text browsing) are the fallback if needed.
 
 ## Install
 
