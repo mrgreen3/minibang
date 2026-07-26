@@ -31,7 +31,7 @@ set $dmenu_theme -fn "DejaVu Sans Mono:size=10" -nb $bg -nf $fg -sb $accent -sf 
 bindsym $mod+space exec dmenu_run $dmenu_theme
 
 # Web (terminal browser, no GUI browser shipped)
-bindsym $mod+w exec $term -e links https://start.archlinux.org
+bindsym $mod+w exec $term -e links https://archbang.org
 
 # Screenshots
 bindsym $mod+p exec scrot ~/Pictures/%d%m%y%H%M%S.png
