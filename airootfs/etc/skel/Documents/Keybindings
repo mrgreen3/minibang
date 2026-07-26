@@ -9,7 +9,7 @@ APPLICATIONS
 
 Super + Return           Terminal (urxvtc)
 Super + Space             Launcher (dmenu_run)
-Super + w                 Web Browser (w3m, in terminal)
+Super + w                 Web Browser (links, in terminal)
 Super + n                 Network Menu (nmtui)
 Super + m                 Power Menu (logout/reboot/poweroff)
 Super + p                 Screenshot (full)

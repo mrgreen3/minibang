@@ -36,7 +36,7 @@ Stack
   - rxvt-unicode (urxvt) - daemon mode, one process shared across windows
   - feh - wallpaper
   - dmenu - app launcher
-  - ranger / w3m - terminal fallbacks for files/web (no GUI browser or file
+  - ranger / links - terminal fallbacks for files/web (no GUI browser or file
     manager shipped by default)
 
 

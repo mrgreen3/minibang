@@ -19,7 +19,7 @@ xz
 
 ## === TERMINAL-BASED FALLBACKS (no GUI browser/file manager shipped) ===
 lf
-w3m
+links
 
 ## === FILE MANAGEMENT ===
 udisks2

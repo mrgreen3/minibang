@@ -1,7 +1,7 @@
 # add vim as default editor
 export EDITOR=vim
 export TERMINAL=urxvt
-export BROWSER=w3m
+export BROWSER=links
 
 # Add scripts path safely
 if [[ ":$PATH:" != *":$HOME/Scripts:"* ]]; then

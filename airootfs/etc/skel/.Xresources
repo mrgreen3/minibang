@@ -4,7 +4,7 @@ URxvt.cursorBlink: true
 
 ! Share one urxvtd process across all terminal windows
 URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher: w3m
+URxvt.urlLauncher: links
 
 ! MiniBang theme — single source of truth for terminal + i3 + dmenu.
 ! i3/dmenu pull these via `set_from_resource` (see .config/i3/config) instead
