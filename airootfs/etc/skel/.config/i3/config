@@ -2,6 +2,9 @@
 
 set $mod Mod4
 
+# Keyboard layout (mbinstall seds this to the user's chosen layout at install time)
+exec_always --no-startup-id setxkbmap us
+
 font pango:DejaVu Sans Mono 10
 
 # MiniBang theme — sourced from ~/.Xresources (single source of truth, see

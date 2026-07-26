@@ -462,7 +462,23 @@ select_xkeymap(){
     getxkeymap
     read_input_text "Confirm keymap: $XKEYMAP"
   done
-  arch_chroot "localectl set-x11-keymap ${XKEYMAP}"
+  # NOTE: deliberately not using `localectl` here. arch-chroot bind-mounts the
+  # live host's /run into ${MNT}/run, so localectl's D-Bus call reaches the
+  # LIVE system's systemd-localed and writes the keymap onto the live host
+  # instead of the target disk — the installed system silently keeps its
+  # default (US) layout. Write the xorg-keyboard config directly instead.
+  mkdir -p "${MNT}/etc/X11/xorg.conf.d"
+  cat > "${MNT}/etc/X11/xorg.conf.d/00-keyboard.conf" <<EOF
+Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "${XKEYMAP}"
+EndSection
+EOF
+
+  # Belt-and-braces: also update the per-session setxkbmap call in i3 config,
+  # in case InputClass isn't picked up (e.g. keyboard hotplugged after Xorg init).
+  sed -i "s/setxkbmap us/setxkbmap ${XKEYMAP}/" "${MNT}/home/${LIVE_USER}/.config/i3/config"
 }
 #}}}
 
@@ -1329,7 +1345,7 @@ run_step 2 "Install MiniBang"        install_minibang configure_fstab configure_
 run_step 3 "Hostname"                configure_hostname
 run_step 4 "Location"                configure_timezone configure_hardwareclock configure_mirrors
 run_step 5 "Locale"                  configure_locale
-run_step 6 "Keyboard Layout"         select_xkeymap
+run_step 6 "Keyboard Layout"         configure_vconsole select_xkeymap
 run_step 7 "Bootloader"              configure_bootloader
 run_step 8 "Root and User Setup"     root_password setup_user
 finish
