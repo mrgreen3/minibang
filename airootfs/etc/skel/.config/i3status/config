@@ -9,7 +9,35 @@ general {
     color_bad      = "#e0623f"
 }
 
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "memory"
 order += "tztime local"
+
+wireless _first_ {
+    format_up = "WIFI: (%quality at %essid)"
+    format_down = "WIFI: down"
+}
+
+ethernet _first_ {
+    format_up = "LAN: %ip (%speed)"
+    format_down = "LAN: down"
+}
+
+battery all {
+    format = "%status %percentage"
+    format_down = "no battery"
+    low_threshold = 15
+    threshold_type = "percentage"
+}
+
+memory {
+    format = "MEM: %percentage_used"
+    threshold_degraded = "20%"
+    format_degraded = "MEM LOW: %percentage_used"
+    threshold_critical = "10%"
+}
 
 tztime local {
     format = "%d-%m-%Y %H:%M"
