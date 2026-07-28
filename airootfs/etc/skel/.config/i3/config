@@ -2,18 +2,21 @@
 
 set $mod Mod4
 
+focus_follows_mouse yes
+
 # Keyboard layout (mbinstall seds this to the user's chosen layout at install time)
 exec_always --no-startup-id setxkbmap us
 
-font pango:DejaVu Sans Mono 10
+font pango:DejaVu Sans Mono 12
 
 # MiniBang theme — sourced from ~/.Xresources (single source of truth, see
 # that file's comment); fallback hex only applies if xrdb has no value merged.
-set_from_resource $bg      i3.background #1a1d1e
-set_from_resource $bg-alt  i3.bgAlt      #24282a
-set_from_resource $fg      i3.foreground #d8d8d8
-set_from_resource $fg-dim  i3.fgDim      #6b7280
-set_from_resource $accent  i3.accent     #3fa796
+set_from_resource $bg      i3.background #1a1620
+set_from_resource $bg-alt  i3.bgAlt      #3a2f52
+set_from_resource $fg      i3.foreground #ece8f8
+set_from_resource $fg-dim  i3.fgDim      #a99cc4
+set_from_resource $accent  i3.accent     #8b5cf6
+set_from_resource $lavender i3.lavender  #c3bce6
 set_from_resource $urgent  i3.urgent     #e0623f
 
 # class                 border   backgr.  text   indicator  child_border
@@ -22,16 +25,16 @@ client.unfocused         $bg-alt  $bg-alt  $fg-dim $bg-alt   $bg-alt
 client.focused_inactive  $bg-alt  $bg-alt  $fg-dim $bg-alt   $bg-alt
 client.urgent            $urgent  $urgent  $fg    $urgent    $urgent
 
-# Terminal (urxvtc talks to the urxvtd daemon started in .xinitrc)
-set $term urxvtc
-bindsym $mod+Return exec $term
+# Terminal
+set $term urxvt
+bindsym $mod+Return exec --no-startup-id $term
+for_window [class="URxvt"] floating disable
 
 # Launcher
-set $dmenu_theme -fn "DejaVu Sans Mono:size=10" -nb $bg -nf $fg -sb $accent -sf $fg
-bindsym $mod+space exec dmenu_run $dmenu_theme
+bindsym $mod+space exec dmenu_run -fn "DejaVu Sans Mono:size=12" -nb '#1a1620' -nf '#ece8f8' -sb '#8b5cf6' -sf '#ece8f8'
 
 # Web (terminal browser, no GUI browser shipped)
-bindsym $mod+w exec $term -e links https://archbang.org
+bindsym $mod+w exec --no-startup-id $term -e links https://archbang.org
 
 # Screenshots
 bindsym $mod+p exec scrot ~/Pictures/%d%m%y%H%M%S.png
@@ -40,11 +43,8 @@ bindsym $mod+Shift+s exec scrot -s ~/Pictures/%d%m%y%H%M%S.png
 # Network menu (nmtui, no dmenu-based network UI shipped)
 bindsym $mod+n exec $term -e nmtui
 
-# Power menu
-bindsym $mod+m exec ~/Scripts/powermenu
-
 # Lock screen
-bindsym $mod+l exec i3lock -c 1a1d1e
+bindsym $mod+l exec i3lock -c 1a1620
 
 # Kill focused window
 bindsym $mod+q kill
@@ -70,7 +70,6 @@ bindsym $mod+f fullscreen toggle
 
 # Layout
 bindsym $mod+s layout stacking
-bindsym $mod+e layout toggle split
 bindsym $mod+z layout tabbed
 
 # Floating
@@ -114,23 +113,11 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 # Reload / restart / exit
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'
-
-# Resize mode
-mode "resize" {
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize grow height 10 px or 10 ppt
-    bindsym Up resize shrink height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+e exec ~/Scripts/powermenu-i3
 
 # Gaps (kept modest — low-RAM target, i3's compositing-free gaps are cheap either way)
 gaps inner 6
-gaps outer 0
+gaps outer 6
 
 # No titlebars — thin pixel border instead (focus still visible via border color)
 default_border pixel 2
@@ -145,8 +132,8 @@ bar {
         statusline           $fg
         separator            $fg-dim
 
-        focused_workspace    $accent $accent $fg
-        active_workspace     $bg-alt $bg-alt $fg
+        focused_workspace    $accent $accent $bg
+        active_workspace     $lavender $lavender $bg
         inactive_workspace   $bg-alt $bg-alt $fg-dim
         urgent_workspace     $urgent $urgent $fg
     }

@@ -17,36 +17,9 @@ alias pkg_size="pacman -Qi | awk '/^Name/{n=\$3} /^Installed Size/{print \$4\$5\
 alias update='sudo pacman -Syu'
 alias updates='checkupdates'
 
-# fzf shell integration
-eval "$(fzf --bash)"
-
-# fzf defaults
-export FZF_DEFAULT_OPTS="--height 40% --reverse --border"
-export FZF_CTRL_R_OPTS="--border"
-
-# Enhanced history function
-fh() {
-  local cmd
-  cmd=$(history | awk '{$1=""; print substr($0,2)}' | tac | sort -u | fzf \
-    --height 40% \
-    --reverse \
-    --border \
-    --prompt="History ❯ " \
-    --preview 'echo {}' \
-    --preview-window=up:1:wrap \
-  )
-  if [ -n "$cmd" ]; then
-    echo -e "\n> $cmd"
-    read -p "Run? [y/N/c(opy)] " ans
-    if [[ "$ans" =~ ^[Yy]$ ]]; then
-      history -s "$cmd"
-      eval "$cmd"
-    elif [[ "$ans" =~ ^[Cc]$ ]]; then
-      echo -n "$cmd" | xclip -selection clipboard && echo "Copied to clipboard."
-    fi
-  fi
-}
-
-# Bindings for fh
-bind -x '"\C-h": fh'
+# Works around a urxvt 9.31 regression where the prompt renders mid-window
+# (blank space above it) when i3 tiles a new terminal to full height before
+# urxvt's first redraw. A clear forces a proper repaint at startup.
+# https://bbs.archlinux.org/viewtopic.php?id=282889
+[[ "$TERM" == rxvt* ]] && clear
 
