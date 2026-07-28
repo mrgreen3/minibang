@@ -7,6 +7,9 @@ focus_follows_mouse yes
 # Keyboard layout (mbinstall seds this to the user's chosen layout at install time)
 exec_always --no-startup-id setxkbmap us
 
+# Background
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+
 font pango:DejaVu Sans Mono 12
 
 # MiniBang theme — sourced from ~/.Xresources (single source of truth, see
