@@ -32,7 +32,6 @@ ttf-dejavu
 
 ## === SYSTEM MONITORING ===
 htop
-fastfetch
 laptop-detect
 
 ## === DISK & PARTITION TOOLS ===
@@ -46,7 +45,6 @@ usb_modeswitch
 broadcom-wl
 
 ## === SYSTEM TOOLS ===
-dialog
 sudo
 fontconfig
 kbd
@@ -58,8 +56,6 @@ openssh
 arch-install-scripts
 curl
 pacman-contrib
-fzf
-eza
 
 ## === BUILD & DEVELOPMENT TOOLS ===
 rsync
