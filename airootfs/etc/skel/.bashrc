@@ -8,6 +8,11 @@ if [[ ":$PATH:" != *":$HOME/Scripts:"* ]]; then
     export PATH="$PATH:$HOME/Scripts"
 fi
 
+# Prompt/ls colors — ANSI indices only, so they render via the Nord palette
+# already set in .Xresources (URxvt.color0-15) instead of duplicating hex here.
+PS1='\[\e[1;35m\]\u@\h\[\e[0m\] \[\e[1;34m\]\w\[\e[0m\]\$ '
+export LS_COLORS='di=1;34:ln=1;36:ex=1;32'
+
 alias ls='ls --color=auto'
 
 # Package sizes
