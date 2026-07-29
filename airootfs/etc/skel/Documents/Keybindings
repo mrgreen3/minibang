@@ -7,11 +7,10 @@ NOTE: Super = Windows Key (mod)
 APPLICATIONS
 ───────────────────────
 
-Super + Return           Terminal (urxvtc)
+Super + Return           Terminal (urxvt)
 Super + Space             Launcher (dmenu_run)
 Super + w                 Web Browser (links, in terminal)
 Super + n                 Network Menu (nmtui)
-Super + m                 Power Menu (logout/reboot/poweroff)
 Super + p                 Screenshot (full)
 Super + Shift + s         Screenshot (region)
 Super + l                 Lock Screen (i3lock)
@@ -32,7 +31,6 @@ FOCUS & MOVEMENT
 
 Super + ←/→/↑/↓            Focus Direction
 Super + Shift + ←/→/↑/↓    Move Window
-Super + r                 Resize Mode (arrows to resize, Enter/Esc to exit)
 
 
 WORKSPACES
@@ -46,8 +44,8 @@ LAYOUT
 ───────────────────────
 
 Super + h / v               Split Horizontal / Vertical
-Super + s                   Stacking Layout
 Super + e                   Toggle Split Layout
+Super + s                   Stacking Layout
 Super + z                   Tabbed Layout
 
 
@@ -56,4 +54,4 @@ SYSTEM
 
 Super + Shift + c           Reload i3 Config
 Super + Shift + r           Restart i3 (in place)
-Super + Shift + e           Exit i3 (confirm)
+Super + Shift + e           Power Menu (logout/reboot/poweroff)

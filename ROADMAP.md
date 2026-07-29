@@ -7,7 +7,7 @@
 - [x] Install-to-disk: reworked ArchBang's abinstall into `mbinstall` — i3/Xorg keyboard config via `localectl set-x11-keymap` (was mango-specific), gparted removed, full MiniBang branding
 - [x] NetworkManager, controlled via nmtui (no dmenu-based network UI)
 - [x] No display manager — autologin tty1 + `startx` via `.bash_profile`/`.xinitrc`
-- [x] i3 config, i3status config, urxvt daemon mode (.Xresources)
+- [x] i3 config, i3status config, urxvt (.Xresources)
 - [x] Branding pass on os-release, profiledef.sh, FUNDING.yml
 - [x] Dropped gparted (pulled in the full GTK3 stack) — parted/gptfdisk/cfdisk cover partitioning
 - [x] lf over ranger for the file-manager fallback — static binary, no Python interpreter to spin up
@@ -24,3 +24,7 @@
 
 - [ ] Screenshot script polish (region select via a helper wrapping scrot)
 - [ ] Accessibility options (font size, contrast)
+- [ ] EROFS instead of squashfs for the airootfs image — typically better compression ratio and faster decompression (`airootfs_image_type="erofs"` in profiledef.sh)
+- [ ] zram sizing: consider `ram` (full 1GB) instead of `ram / 2` on very low-RAM targets
+- [ ] i3status: add `disk_usage` and `load` modules for low-RAM hardware monitoring
+- [ ] reflector for automatic mirror selection in mbinstall, instead of the manual country/sed approach

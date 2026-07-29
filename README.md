@@ -37,7 +37,17 @@ Even on very old hardware, most laptops from the last ~15 years are 64-bit capab
 
 ## Kernel
 
-No custom kernel — uses standard Arch `kex` or `linux-lts` packages. The two are within ~3MB of each other installed, so the real RAM savings come from the userspace stack above, not the kernel choice.
+No custom kernel — uses standard Arch `linux` or `linux-lts` packages. The two are within ~3MB of each other installed, so the real RAM savings come from the userspace stack above, not the kernel choice.
+
+## Installing to disk
+
+Boot the live ISO and run:
+
+```sh
+sudo mbinstall
+```
+
+`mbinstall` (in `~/Scripts/`) handles partitioning, pacstrap, and MiniBang branding/config on the target disk. The manual `pacman -S` steps above are for setting up the stack on an existing install, not for the live-ISO install path.
 
 ## Status
 
