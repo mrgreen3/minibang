@@ -25,6 +25,7 @@
 #-------------------------------------------------------------------------------
 
 log_file=""
+VERBOSE_MODE=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -45,13 +46,10 @@ if [[ -n "$log_file" ]]; then
   echo "Logging to $log_file"
 fi
 
-# --- Parse simple key=value or -i flags ---
+# --- Parse simple flags ---
 for arg in "$@"; do
   case $arg in
-    -i|--install) INTERACTIVE=0 ;;
-    hostname=*)   host_name="${arg#*=}" ;;
-    locale=*)     LOCALE_VALUE="${arg#*=}" ;;
-    keymap=*)     KEYMAP_VALUE="${arg#*=}" ;;
+    -v|--verbose) VERBOSE_MODE=1 ;;
   esac
 done
 
@@ -103,16 +101,11 @@ done
   VG_NAME="lvm"
   LV_ROOT="root"
   LIVE_USER="live"
-  [[ $1 == -v || $1 == --verbose ]] && VERBOSE_MODE=1 || VERBOSE_MODE=0 # VERBOSE MODE
   [[ -f $LOG ]] && rm -f $LOG
   AUTOMATIC_MODE=0
   TRIM=0
   cpu_id=""
-  # --- Optional installer variables (can be overridden by args) ---
-  host_name=""          # For hostname
-  LOCALE_VALUE=""       # For locale
-  KEYMAP_VALUE=""       # For keyboard layout
-  INTERACTIVE=1         # 1 = ask, 0 = skip prompts
+  host_name=""
 
 #}}}
 #COMMON FUNCTIONS {{{
@@ -977,9 +970,7 @@ configure_hostname() {
   print_title "HOSTNAME - ${WIKI}/hostname"
   print_info "A host name identifies your machine on a network (max 63 chars)."
 
-  if [[ $INTERACTIVE -eq 1 && -z "$host_name" ]]; then
-    read -p "Hostname [ex: arch]: " host_name
-  fi
+  read -p "Hostname [ex: arch]: " host_name
 
   host_name="${host_name:-minibang}"
 
