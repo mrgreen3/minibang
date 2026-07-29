@@ -1,44 +1,16 @@
 general {
     colors = true
     interval = 5
-
-    # Mirrors MiniBang's ~/.Xresources palette (i3status can't read X
-    # resources directly, so these are kept in sync by hand).
-    color_good     = "#3fa796"
-    color_degraded = "#d9a441"
-    color_bad      = "#e0623f"
+    markup = "pango"
 }
 
-order += "wireless _first_"
-order += "ethernet _first_"
-order += "battery all"
-order += "memory"
 order += "tztime local"
 
-wireless _first_ {
-    format_up = "WIFI: (%quality at %essid)"
-    format_down = "WIFI: down"
-}
-
-ethernet _first_ {
-    format_up = "LAN: %ip (%speed)"
-    format_down = "LAN: down"
-}
-
-battery all {
-    format = "%status %percentage"
-    format_down = "no battery"
-    low_threshold = 15
-    threshold_type = "percentage"
-}
-
-memory {
-    format = "MEM: %percentage_used"
-    threshold_degraded = "20%"
-    format_degraded = "MEM LOW: %percentage_used"
-    threshold_critical = "10%"
-}
-
+# Colors below mirror ~/.Xresources' accent/bg (i3status can't read
+# $accent/$bg from the i3 config, so keep these in sync by hand). Uses
+# $accent (not $lavender) to match focused_workspace — the one you're
+# actually on — since $lavender's active_workspace only ever renders on
+# a second monitor.
 tztime local {
-    format = "%d-%m-%Y %H:%M"
+    format = "<span background='#8b5cf6' foreground='#1a1620'> %d-%m-%Y %H:%M </span>"
 }
