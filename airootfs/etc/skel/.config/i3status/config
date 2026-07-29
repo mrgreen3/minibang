@@ -1,16 +1,10 @@
 general {
     colors = true
     interval = 5
-    markup = "pango"
 }
 
 order += "tztime local"
 
-# Colors below mirror ~/.Xresources' accent/bg (i3status can't read
-# $accent/$bg from the i3 config, so keep these in sync by hand). Uses
-# $accent (not $lavender) to match focused_workspace — the one you're
-# actually on — since $lavender's active_workspace only ever renders on
-# a second monitor.
 tztime local {
-    format = "<span background='#8b5cf6' foreground='#1a1620'> %d-%m-%Y %H:%M </span>"
+    format = "%d-%m-%Y %H:%M"
 }
