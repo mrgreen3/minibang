@@ -1,10 +1,12 @@
 [network]
 command=$HOME/.config/i3blocks/scripts/network
 interval=60
+markup=pango
 
 [battery]
 command=$HOME/.config/i3blocks/scripts/battery
 interval=60
+markup=pango
 
 [time]
 command=date '+ %d-%m-%Y %H:%M'

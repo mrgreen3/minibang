@@ -10,11 +10,11 @@ if [ -z "$active" ]; then
 fi
 
 type=$(printf '%s' "$active" | cut -d: -f1)
-name=$(printf '%s' "$active" | cut -d: -f2-)
+name=$(printf '%s' "$active" | cut -d: -f2- | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
 
 case "$type" in
     802-11-wireless)
-        echo "WIFI: ${name} "
+        echo "<span color=\"#c3bce6\">WIFI</span>: ${name} "
         ;;
     802-3-ethernet)
         echo "LAN: ${name}"
