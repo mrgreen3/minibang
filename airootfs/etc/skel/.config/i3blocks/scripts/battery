@@ -31,7 +31,7 @@ case "$status" in
     *) label="FULL" ;;
 esac
 
-echo "${label}: ${percent}%"
+echo " ${label}: ${percent}% "
 echo ""
 if [ "$status" = "Discharging" ] && [ "$percent" -le 15 ]; then
     echo "#e0623f"

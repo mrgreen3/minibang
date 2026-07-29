@@ -7,5 +7,5 @@ command=$HOME/.config/i3blocks/scripts/battery
 interval=60
 
 [time]
-command=date '+%d-%m-%Y %H:%M'
+command=date '+ %d-%m-%Y %H:%M'
 interval=5
