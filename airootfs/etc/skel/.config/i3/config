@@ -129,7 +129,7 @@ default_border pixel 2
 default_floating_border pixel 2
 
 bar {
-    status_command i3status
+    status_command i3blocks
     position top
 
     colors {

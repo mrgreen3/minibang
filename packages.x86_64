@@ -4,7 +4,7 @@ xorg-xinit
 xorg-drivers
 xorg-setxkbmap
 i3-wm
-i3status
+i3blocks
 i3lock
 rxvt-unicode
 dmenu
