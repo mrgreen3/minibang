@@ -24,6 +24,8 @@ Super + f                 Fullscreen
 Super + Shift + Space     Toggle Float
 Super + Ctrl + Space      Toggle Focus (tiling/floating)
 Super + a                 Focus Parent
+Super + Left Click Drag   Move Floating Window
+Super + Right Click Drag  Resize Floating Window
 
 
 FOCUS & MOVEMENT

@@ -1,6 +1,7 @@
 # MiniBang i3 config
 
 set $mod Mod4
+floating_modifier $mod
 
 focus_follows_mouse yes
 
