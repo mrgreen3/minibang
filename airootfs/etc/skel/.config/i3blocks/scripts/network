@@ -1,0 +1,26 @@
+#!/bin/sh
+# Uses nmcli (already pulled in by networkmanager) rather than iw/wireless-tools,
+# which aren't otherwise a dependency of this ISO.
+
+active=$(nmcli -t -f TYPE,NAME connection show --active 2>/dev/null | grep -v '^loopback:' | head -n1)
+
+if [ -z "$active" ]; then
+    echo "NET: down"
+    exit 0
+fi
+
+type=$(printf '%s' "$active" | cut -d: -f1)
+name=$(printf '%s' "$active" | cut -d: -f2-)
+
+case "$type" in
+    802-11-wireless)
+        signal=$(nmcli -t -f active,signal dev wifi list --rescan no 2>/dev/null | awk -F: '$1=="yes"{print $2; exit}')
+        echo "WIFI: ${name} (${signal:-?}%)"
+        ;;
+    802-3-ethernet)
+        echo "LAN: ${name}"
+        ;;
+    *)
+        echo "NET: ${name}"
+        ;;
+esac
