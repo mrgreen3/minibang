@@ -1,3 +1,6 @@
+separator=true
+separator_block_width=15
+
 [network]
 command=$HOME/.config/i3blocks/scripts/network
 interval=60
@@ -9,5 +12,5 @@ interval=60
 markup=pango
 
 [time]
-command=date '+ %d-%m-%Y %H:%M'
+command=date '+%d-%m-%Y %H:%M'
 interval=5

@@ -4,7 +4,9 @@
 set -uo pipefail
 
 if [ -t 1 ]; then
-    label='\033[1;36m'
+    # 256-color index 104, closest xterm-palette match to the i3blocks
+    # lavender (#8a7dcf) - truecolor escapes aren't reliable on stock urxvt.
+    label='\033[1;38;5;104m'
     reset='\033[0m'
 else
     label=''

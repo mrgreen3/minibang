@@ -19,7 +19,8 @@ for bat in /sys/class/power_supply/BAT*; do
 done
 
 if [ "$full" -eq 0 ]; then
-    echo "no battery"
+    # No battery (desktop) - print nothing so i3blocks hides the block
+    # instead of showing "no battery" text.
     exit 0
 fi
 
@@ -31,7 +32,7 @@ case "$status" in
     *) label="FULL" ;;
 esac
 
-echo " <span color=\"#c3bce6\">${label}</span>: ${percent}% "
+echo "<span color=\"#8a7dcf\">${label}</span>: ${percent}%"
 echo ""
 if [ "$status" = "Discharging" ] && [ "$percent" -le 15 ]; then
     echo "#e0623f"

@@ -14,10 +14,12 @@ name=$(printf '%s' "$active" | cut -d: -f2- | sed 's/&/\&amp;/g; s/</\&lt;/g; s/
 
 case "$type" in
     802-11-wireless)
-        echo "<span color=\"#c3bce6\">WIFI</span>: ${name} "
+        echo "<span color=\"#8a7dcf\">WIFI</span>: ${name}"
         ;;
     802-3-ethernet)
-        echo "LAN: ${name}"
+        # NM's connection profile name (eg. "Wired connection 1") is noise
+        # here, not signal, so just show the state instead of ${name}.
+        echo "<span color=\"#8a7dcf\">LAN</span>: connected"
         ;;
     *)
         echo "NET: ${name}"
