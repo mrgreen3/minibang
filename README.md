@@ -7,7 +7,7 @@ Built entirely with pacman and official Arch repositories — no separate distro
 ## Stack
 
 - **Xorg** (not Wayland) — lower overhead, no compositor tax
-- **i3** — tiling window manager, ships with `i3bar` + `i3status` built in (no separate panel needed)
+- **i3** — tiling window manager, ships with `i3bar` + `i3blocks` built in (no separate panel needed)
 - **rxvt-unicode (urxvt)** — lightweight terminal, supports daemon mode to share one process across windows
 - **feh** — wallpaper setting
 - **dmenu** — app launcher, no GTK/Qt dependencies

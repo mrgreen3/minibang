@@ -24,7 +24,7 @@ Design Philosophy
 
   * Lightweight - low overhead stack for ~1GB RAM hardware
   * Xorg, not Wayland - no compositor tax
-  * No GTK/Qt - dmenu, i3bar/i3status, urxvt throughout
+  * No GTK/Qt - dmenu, i3bar/i3blocks, urxvt throughout
   * Arch underneath - full pacman access, official repos only
 
 
@@ -32,7 +32,7 @@ Stack
 -----
 
   - Xorg (xorg-server, xorg-xinit, xorg-drivers)
-  - i3 - tiling window manager, with i3bar + i3status built in
+  - i3 - tiling window manager, with i3bar + i3blocks built in
   - rxvt-unicode (urxvt) - daemon mode, one process shared across windows
   - feh - wallpaper
   - dmenu - app launcher
